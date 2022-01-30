@@ -6,3 +6,6 @@ pruebas.js
 
 # BD
 admin_tienda.sql
+
+# package-lock
+package-lock.json
