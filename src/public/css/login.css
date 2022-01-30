@@ -1,0 +1,179 @@
+body {
+    /* font-family: 'Source Sans Pro', sans-serif; */
+    /*font-family: 'PT Sans', sans-serif;*/
+    /* font-family: 'Bai Jamjuree', sans-serif; */
+    /* font-family: 'Baloo', cursive; */
+    /* font-family: 'Patua One', cursive; */
+    /* font-family: 'Bitter', serif; */
+    /* font-family: 'Fjalla One', sans-serif; */
+    /* font-family: 'Be Vietnam', sans-serif; */
+    /* font-family: 'Nanum Gothic', sans-serif; */
+    /* font-family: 'Ubuntu', sans-serif; */
+    /* font-family: 'Satisfy', cursive; */
+    
+    margin: 0;
+    background: #f6f6f6;
+}
+
+/* .header {
+    height: 70px;
+    background-color: #454648;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+/* .header .school {
+    font-family: 'Bai Jamjuree', sans-serif;
+    color: white; */
+    /* font-weight: bold; */
+    /* font-size: 22px;
+} */
+
+/* .header .school i {
+    padding: 10px;
+} */
+
+/* .header .menu {
+    font-family: 'Source Sans Pro', sans-serif;
+    height: inherit;
+    font-weight: bold;
+    font-size: 17px;
+} */
+
+/* .header ol {
+    margin: 0;
+    padding: 0;
+    height: inherit;
+    display: flex;
+}
+
+.header ol li {
+    list-style: none;
+    height: inherit;
+}
+
+.header ol li:hover {
+    background-color: #40739e;
+}
+*/
+/* .header a { */
+    /* height: inherit; */
+    /* text-decoration: none; */
+    /* padding: 0 20px; */
+    /* color: white;
+    display: flex;
+    align-items: center;
+    border: 1px solid transparent;
+    margin: 13px 4px;
+    padding: 10px;
+    height: initial;
+}  */
+
+/* .header .container {
+    max-width: 90%;
+    flex: 1;
+    height: inherit;
+    margin: auto;
+    display: inherit;
+    justify-content: inherit;
+    align-items: inherit;
+} */
+
+
+
+.login {
+    padding: 74px 20px;
+}
+
+.login-form {
+    background: white;
+    text-align: center;
+    padding: 34px 0;
+    border-radius: 15px;
+}
+
+.illustration {
+    font-size: 90px;
+    padding: 30px;
+}
+
+.form-group {
+    padding-bottom: 20px;
+}
+
+.form-group input {
+    border-radius: 5px;
+    padding: 7px 28px;
+    border: 1px solid #bdc3c7;
+}
+
+.form-group button {
+    background-color: #10ac84;
+    border: 0;
+    color: white;
+    padding: 10px 64px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.form-group button:hover {
+    background-color: #1dd1a1;
+}
+
+.login-form a {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    color: gray;
+    font-size: 13px;
+}
+
+
+.containerLogin {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Desktop First que empieze desde el MQ mas grande */
+
+@media screen and (max-width: 1024px){
+
+    
+}
+
+@media screen and (max-width: 767px){
+
+    /* .header {
+        display: block;
+        height: auto;
+    }
+
+    .header .school {
+        padding: 20px;
+        text-align: center;
+    }
+
+    .header ol {
+        display: block;
+    }
+
+    .header ol li {
+        height: 50px;
+    }
+
+    .header a {
+        justify-content: center;
+    } */
+
+}
+
+@media screen and (max-width: 480px){
+
+    
+}
+
+@media screen and (max-width: 320px){
+
+    
+}

@@ -1,0 +1,76 @@
+<div class="title-container-menuTienda">
+    <div class="title-content-menuTienda">
+        <div class="title-menuTienda">
+            <h1>Productos en Variedad</h1>
+            <h2>Encuentra los mejores productos al mejor precio ⚡</h2>
+        </div>
+        <figure>
+            <img src="/img/logo2.jpg" alt="logo de portada">
+        </figure>
+    </div>
+</div>
+
+<section class="container-menuTienda">
+    <div class="menuTienda">
+        <div class="state">RECOMENDACIONES ESPECIALES PARA TI 👈</div>
+        <div class="container-categoria">
+            {{#each data}}
+            <div class="listCategoria">
+                <figure>
+                    <a href="/menuTienda/tiendaProducto/{{id_categoria}} {{nombre_categoria}}">
+                        <img src="{{logo}}" alt="logo">
+                    </a>
+                </figure>
+                <div class="name-categoria">{{nombre_categoria}}</div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+{{!-- <p>
+    {{ id_producto }} {{ name }} {{ descripcion }} {{ marca }} {{ precio }}
+</p> --}}
+
+{{!-- <table id="example1" class="tabla">
+    <thead>
+        <tr>
+            <th>Identificacion</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Fecha Nacimiento</th>
+            <th>Sexo</th>
+            <th>Diagnóstico</th>
+            <th>Fecha Ingreso</th>
+            <th>Fecha Egreso</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>zapatos</td>
+            <td>pacApellidos</td>
+            <td>pacFechaNacimiento</td>
+            <td>pacSexo</td>
+            <td>pacDiagnostico</td>
+            <td>pacFechaIngreso</td>
+            <td>pacFechaEgreso</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>chompas</td>
+            <td>pacApellidos</td>
+            <td>pacFechaNacimiento</td>
+            <td>pacSexo</td>
+            <td>pacDiagnostico</td>
+            <td>pacFechaIngreso</td>
+            <td>pacFechaEgreso</td>
+        </tr>
+    </tbody>
+</table> --}}

@@ -1,0 +1,49 @@
+<section class="list-data">
+    <div class="state">MANTENIMIENTO DE PRODUCTOS</div>
+    {{#if message }}
+        <div class="messageError">{{ message }}</div>
+    {{/if}}
+
+    {{#if success }}
+        <div class="messageSuccess">{{ success }}</div>
+    {{/if}}
+    <div class="list-cuerpo">
+        <div class="addBoton">
+            <p class="boton">
+                <a href="/producto/add">
+                    <img src="/img/agregar.png" alt="agregar" width="20px">
+                    <strong>Registrar</strong>
+                </a>
+            </p>
+        </div>
+        <div class="data-table-pagination">
+            <table id="example1" class="data-table">
+                <thead>
+                    <tr>
+                        <th><p class="description-name">Categoria</p></th>
+                        <th><p class="description-name">Producto</p></th>
+                        <th><p class="description">Descripción</p></th>
+                        {{!-- <th><p class="description">Marca</p></th> --}}
+                        <th><p class="description">Precio S/.</p></th>
+                        <th><p class="description">Editar </p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each data}}
+                    <tr>
+                        <td><p class="description-valor">{{categorium.nombre_categoria}}</p></td>
+                        <td><p class="description-valor">{{nombre_producto}}</p></td>
+                        <td><p class="description">{{descripcion}}</p></td>
+                        {{!-- <td><p class="description">{{marca}}</p></td> --}}
+                        <td><p class="description">{{precio}}</p></td>
+                        <td>
+                            <p class="description"><a href="/producto/edit/{{id_producto}}"><img
+                            src="/img/editar.png" alt="icon de Editar"></a></p>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,8 @@
+# Dependency directories
+node_modules/
+
+# Pruebas
+pruebas.js
+
+# BD
+admin_tienda.sql

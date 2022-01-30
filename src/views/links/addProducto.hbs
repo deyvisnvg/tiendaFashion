@@ -1,0 +1,73 @@
+<input type="hidden" name="modulo" id="moduloEditUser" value="{{usuario.modulo}}">
+<section class="registro-data">
+    <div class="state"><a href="/producto/product"><i class="icon-arrow-left2 positionIcon"></i></a>AGREGAR PRODUCTO</div>
+    {{#if message }}
+    <div class="messageError">{{ message }}</div>
+    {{/if}}
+
+    {{#if success }}
+    <div class="messageSuccess">{{ success }}</div>
+    {{/if}}
+    <div class="data">
+        <form action="/producto/add" method="post" enctype="multipart/form-data">
+            <div class="data-valor1">
+                <p class="description">Código: </p>
+                <p><input type="text" name="id_producto" id="idProducto" value="" readonly></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Categoría: </p>
+                <p>
+                    <select name="categoria" required>
+                        <option value="">Seleccione...</option>
+                        {{#each data}}
+                        <option value="{{id_categoria}}">{{nombre_categoria}}</option>
+                        {{/each}}
+                    </select>
+                </p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Foto: </p>
+                {{!-- <input type="hidden" name="foto" value=""> --}}
+                <p><input type="file" name="image" value="" required></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Foto Detalle: </p>
+                {{!-- <input type="hidden" name="foto" value=""> --}}
+                <p><input type="file" name="image2" value="" required></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Foto opcional: </p>
+                {{!-- <input type="hidden" name="foto_alternativa" value=""> --}}
+                <p><input type="file" name="image3" value=""></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Nombre: </p>
+                <p><input type="text" name="nombre_producto" value="" required pattern="[A-Za-z\s]{3,50}"
+                        title="Ingrese solo letras Mayúsculas y minúsculas"></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Descripción: </p>
+                <p>
+                    <textarea name="descripcion" id="" cols="25" rows="10"></textarea></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Marca: </p>
+                <p><input type="text" name="marca" value=""></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Precio: </p>
+                <p><input type="text" name="precio" value="" required pattern="[0-9.]+" maxlength="6"
+                        title="El precio debe establecerse en decimales"></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Precio Envío: </p>
+                <p><input type="text" name="precio_envio" value="" required pattern="[0-9.]+" maxlength="6"
+                        title="El precio debe establecerse en decimales"></p>
+            </div>
+
+            <div class="data-boton">
+                <p class="boton"><button type="submit">Registrar</button></p>
+            </div>
+        </form>
+    </div>
+</section>

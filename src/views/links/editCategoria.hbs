@@ -1,0 +1,28 @@
+<input type="hidden" name="modulo" id="estadoConfig" value="{{data.estado}}">
+<section class="registro-data">
+    <div class="state"><a href="/categoria"><i class="icon-arrow-left2 positionIcon"></i></a>EDITAR CATEGORIA</div>
+    <div class="data">
+        <form action="/categoria/update/{{data.id_categoria}}" method="post" enctype="multipart/form-data">
+            <div class="data-valor1">
+                <p class="description">Nombre Categoría: </p>
+                <p><input type="text" name="nombre_categoria" value="{{data.nombre_categoria}}" required pattern="[A-Za-z\s]{3,20}" title="Ingrese solo letras Mayúsculas y minúsculas"></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Logo: </p>
+                {{!-- <input type="hidden" name="foto" value=""> --}}
+                <p><input type="file" name="image" value=""></p>
+            </div>
+
+            <div class="data-valor2" id="outputEstado"></div>
+
+            <div class="data-valor2">
+                <p class="description">Fecha Registro: </p>
+                <p><input type="date" name="name" value="{{data.fecha_registro}}"></p>
+            </div>
+
+            <div class="data-boton">
+                <p class="boton"><button type="submit">Modificar</button></p>
+            </div>
+        </form>
+    </div>
+</section>

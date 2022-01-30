@@ -1,0 +1,158 @@
+<div class="title-container">
+    <div class="title-content">
+        <div class="title-tienda">
+            <h1>{{data.nombre_categoria}}</h1>
+            <h2>Encuentra los mejores productos al mejor precio</h2>
+        </div>
+        <figure>
+            <img src="/img/logo.png" alt="logo de portada">
+        </figure>
+    </div>
+</div>
+
+<section class="container-tienda">
+    <div class="product">
+        <div class="state">PRODUCTOS DISPONIBLES</div>
+        <table id="example1" class="data">
+            <thead hidden>
+                <tr>
+                    <th>detalle</th>
+                    <th>foto</th>
+                    <th>name</th>
+                    <th>Apellidos</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each data.producto}}
+                <tr>
+                    <td>
+                        <div class="container-product codigo{{ id_producto }}">
+                            <div class="product-tienda">
+                                <div class="iconzoom-two" id="bottomzoom-two" data-codigo="{{ id_producto }}">
+                                    {{!-- <div hidden>{{ id_producto }}</div> --}}
+                                    <i class="icon-cross"></i>
+                                </div>
+                                <div class="detalle">
+                                    <div class="detalle-product" hidden>
+                                        <div class="detalle-product-titulo">
+                                            <p> PRODUCTO </p>
+                                        </div>
+                                        <div class="detalle-product-cuerpo">
+                                            <div class="detalle-product-cabecera">
+                                                <p hidden>Código: </p>
+                                                <p>Nombre: </p>
+                                                <p>Marca: </p>
+                                                <p>Precio: </p>
+                                                <p>Precio envío: </p>
+                                                {{!-- <p>Descripción: </p> --}}
+                                            </div>
+                                            <div class="detalle-product-data">
+                                                <p hidden>{{ id_producto }}</p>
+                                                <p>{{ nombre_producto }}</p>
+                                                <p>{{ marca }}</p>
+                                                <p>S/. {{ precio }}</p>
+                                                <p>S/. {{ precio_envio }}</p>
+                                                {{!-- <p>{{ descripcion }}
+                                                    <textarea name="descripcion" id="" cols="35" rows="15" readonly>{{ descripcion }}</textarea>
+                                                    </p> --}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detalle-model">
+                                        <div class="detalle-model-titulo">
+                                            <p> MODELOS </p>
+                                        </div>
+                                        <div class="detalle-model-img">
+                                            <div class="seleccionImage">
+                                                <figure class="flavor" data-title="{{ foto }}">
+                                                    <img src="{{ foto }}" alt="1er modelo de ropa">
+                                                </figure>
+                                                <figure class="flavor" data-title="{{ fotoDetalle }}">
+                                                    <img src="{{ fotoDetalle }}" alt="1er modelo de ropa">
+                                                </figure>
+                                                <figure class="flavor" data-title="{{ foto_alternativa }}">
+                                                    <img src="{{ foto_alternativa }}" alt="2do modelo de ropa">
+                                                </figure>
+                                            </div>
+                                            <div class="vistaPrevia">
+                                                <figure>
+                                                    <div id="imgPrevia{{ id_producto }}">
+                                                        <img src="{{ foto }}" alt="vista previa">
+                                                    </div>
+                                                </figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <figure>
+                            <div class="iconzoom" id="bottomzoom">
+                                <div hidden>{{ id_producto }}</div>
+                                <i class="icon-zoom"></i>
+                            </div>
+                            {{!-- <input type="text" name="" id="" value="{{ foto }}"> --}}
+                            <img src="{{ foto }}" alt="">
+                        </figure>
+                    </td>
+                    <td>
+                        <p class="name">{{nombre_producto}}</p>
+                    </td>
+                    <td>
+                        <p class="cesta"><input type="button" value="Comprar S/. {{ precio }}"></p>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</section>
+
+
+
+
+
+
+
+{{!-- <p>
+    {{ id_producto }} {{ name }} {{ descripcion }} {{ marca }} {{ precio }}
+</p> --}}
+
+{{!-- <table id="example1" class="tabla">
+    <thead>
+        <tr>
+            <th>Identificacion</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Fecha Nacimiento</th>
+            <th>Sexo</th>
+            <th>Diagnóstico</th>
+            <th>Fecha Ingreso</th>
+            <th>Fecha Egreso</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>zapatos</td>
+            <td>pacApellidos</td>
+            <td>pacFechaNacimiento</td>
+            <td>pacSexo</td>
+            <td>pacDiagnostico</td>
+            <td>pacFechaIngreso</td>
+            <td>pacFechaEgreso</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>chompas</td>
+            <td>pacApellidos</td>
+            <td>pacFechaNacimiento</td>
+            <td>pacSexo</td>
+            <td>pacDiagnostico</td>
+            <td>pacFechaIngreso</td>
+            <td>pacFechaEgreso</td>
+        </tr>
+    </tbody>
+</table> --}}

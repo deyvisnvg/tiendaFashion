@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Menú Administrador</title>
+    <link rel="shortcut icon" href="img/taks.png">
+    <link
+        href="https://fonts.googleapis.com/css?family=Bai+Jamjuree:600|Baloo|Bitter:700|Fjalla+One|PT+Sans:700|Patua+One|Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@300;500;600&family=Nanum+Gothic&family=Ubuntu:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playball&family=Satisfy&display=swap" rel="stylesheet">
+
+    <!-- Menú -->
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <!-- menu tienda -->
+    <link rel="stylesheet" href="/css/menuTienda.css">
+    <!-- tienda -->
+    <link rel="stylesheet" href="/css/tiendaProducto.css">
+    <!-- Login -->
+    <link rel="stylesheet" href="/css/login.css">
+    <!-- Estilos para todos los Registros -->
+    <link rel="stylesheet" href="/css/registro.css">
+    <!-- atras style -->
+    <link rel="stylesheet" href="/css/styleAtras.css">
+    <!-- Perfil -->
+    <link rel="stylesheet" href="/css/perfil.css">
+    <!-- messages -->
+    <link rel="stylesheet" href="/css/message.css">
+    <!-- pagination -->
+    <link rel="stylesheet" href="/css/pagination.css">
+
+</head>
+
+
+<body>
+    {{>navigation}}
+
+    {{{ body }}}
+
+    <script>
+        var menu = document.querySelector('.menu');
+
+        var burger = document.querySelector('#icon-burger');
+        burger.addEventListener('click', hideShow);
+
+        function hideShow() {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active');
+            } else {
+                menu.classList.add('is-active');
+            }
+        }
+    </script>
+
+    <script>
+        var menuMonitor = document.querySelector('.menuMonitor');
+        var iconMonitor = document.querySelector('#iconMonitor');
+        iconMonitor.addEventListener('click', hideShowMonitor);
+
+        function hideShowMonitor() {
+            if (menuMonitor.classList.contains('hideMonitor')) {
+                menuMonitor.classList.remove('hideMonitor');
+            } else {
+                menuMonitor.classList.add('hideMonitor');
+            }
+        }
+    </script>
+
+    <!-- JQuery -->
+    <script src="/js/jquery.min.js"></script>
+    <!-- socket.io -->
+    <script src="/socket.io/socket.io.js"></script>
+    <!-- Navigation -->
+    <script src="/js/navigation.js"></script>
+    <!-- eventos de Tienda -->
+    <script src="/js/tiendaProducto.js"></script>
+    <!-- eventos de Estado Config -->
+    <script src="/js/estadoConfig.js"></script>
+    <!-- editUser -->
+    <script src="/js/editUser.js"></script>
+    <!-- addUser -->
+    <script src="/js/addUser.js"></script>
+    <!-- generateCodigo -->
+    <script src="/js/generateCodigo.js"></script>
+
+    <!-- DataTables Paginación y busqueda Automático-->
+    <script>
+        $(function () {
+            $('#example1').DataTable()
+        })
+    </script>
+    <script src="/js/jquery.dataTables.min.js"></script>
+    <script src="/js/pagination.js"></script>
+
+</body>
+
+</html>

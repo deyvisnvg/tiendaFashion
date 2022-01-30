@@ -1,0 +1,45 @@
+<section class="list-data">
+    <div class="state">MANTENIMIENTO DE USUARIOS</div>
+    {{#if message }}
+        <div class="messageError">{{ message }}</div>
+    {{/if}}
+
+    {{#if success }}
+        <div class="messageSuccess">{{ success }}</div>
+    {{/if}}
+    <div class="list-cuerpo">
+        <div class="addBoton">
+            <p class="boton">
+                <a href="/usuario/add">
+                    <img src="/img/agregar.png" alt="agregar" width="20px">
+                    <strong>Registrar</strong>
+                </a>
+            </p>
+        </div>
+        <div class="data-table-pagination">
+            <table id="example1" class="data-table">
+                <thead>
+                    <tr>
+                        <th><p class="description-name">Nombres y Apellidos</p></th>
+                        <th><p class="description">Edad</p></th>
+                        <th><p class="description option">Fecha de Nacimiento</p></th>
+                        <th><p class="description">Editar </p></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each data}}
+                    <tr>
+                        <td><p class="description-valor">{{nombres}} {{apellidos}}</p></td>
+                        <td><p class="description">{{edad}}</p></td>
+                        <td><p class="description"><input type="date" value="{{fecha_nacimiento}}" readonly></p></td>
+                        <td>
+                            <p class="description"><a href="/usuario/edit/{{id_persona}} {{id_usuario}}"><img
+                            src="/img/editar.png" alt="icon de Editar"></a></p>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

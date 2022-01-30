@@ -1,0 +1,42 @@
+<input type="hidden" name="modulo" id="moduloEditUser" value="{{usuario.modulo}}">
+<section class="registro-data">
+    <div class="state"><a href="/categoria"><i class="icon-arrow-left2 positionIcon"></i></a>AGREGAR CATEGORIA</div>
+    {{#if message }}
+    <div class="messageError">{{ message }}</div>
+    {{/if}}
+
+    {{#if success }}
+    <div class="messageSuccess">{{ success }}</div>
+    {{/if}}
+    <div class="data">
+        <form action="/categoria/add" method="post" enctype="multipart/form-data">
+            <div class="data-valor1">
+                <p class="description">Nombre Categoría: </p>
+                <p><input type="text" name="nombre_categoria" value="" required pattern="[A-Za-z\s]{3,40}" title="Ingrese solo letras Mayúsculas y minúsculas"></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Logo: </p>
+                {{!-- <input type="hidden" name="foto" value=""> --}}
+                <p><input type="file" name="image" value="" required></p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Estado: </p>
+                <p>
+                    <select name="estado" required>
+                        <option class="optSelect" value="">Seleccione...</option>
+                        <option value="Activado">Activado</option>
+                        <option value="Desactivado">Desactivado</option>
+                    </select>
+                </p>
+            </div>
+            <div class="data-valor2">
+                <p class="description">Fecha Registro: </p>
+                <p><input type="date" name="fecha_registro" value="{{fecha_registro}}" readonly></p>
+            </div>
+
+            <div class="data-boton">
+                <p class="boton"><button type="submit">Registrar</button></p>
+            </div>
+        </form>
+    </div>
+</section>
