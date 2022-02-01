@@ -60,17 +60,17 @@
                                     </div>
                                     <div class="detalle-model">
                                         <div class="detalle-model-titulo">
-                                            <p> MODELOS </p>
+                                            <p> Código:  <span>{{ id_producto }}</span> </p>
                                         </div>
                                         <div class="detalle-model-img">
                                             <div class="seleccionImage">
-                                                <figure class="flavor" data-title="{{ foto }}">
+                                                <figure class="modelImage" data-url="{{ foto }}">
                                                     <img src="{{ foto }}" alt="1er modelo de ropa">
                                                 </figure>
-                                                <figure class="flavor" data-title="{{ fotoDetalle }}">
+                                                <figure class="modelImage" data-url="{{ fotoDetalle }}">
                                                     <img src="{{ fotoDetalle }}" alt="1er modelo de ropa">
                                                 </figure>
-                                                <figure class="flavor" data-title="{{ foto_alternativa }}">
+                                                <figure class="modelImage" data-url="{{ foto_alternativa }}">
                                                     <img src="{{ foto_alternativa }}" alt="2do modelo de ropa">
                                                 </figure>
                                             </div>
@@ -89,8 +89,8 @@
                     </td>
                     <td>
                         <figure>
-                            <div class="iconzoom" id="bottomzoom">
-                                <div hidden>{{ id_producto }}</div>
+                            <div class="iconzoom" id="bottomzoom" data-codigo="{{ id_producto }}">
+                                {{!-- <div hidden>{{ id_producto }}</div> --}}
                                 <i class="icon-zoom"></i>
                             </div>
                             {{!-- <input type="text" name="" id="" value="{{ foto }}"> --}}

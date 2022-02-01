@@ -1,27 +1,21 @@
 let iconzoomtwo = document.querySelectorAll('.iconzoom-two')
+let iconzoom = document.querySelectorAll('.iconzoom')
+const modelImage = document.querySelectorAll('.modelImage');
 
 let codigo = 0;
 
-$(function () {
-    $('.iconzoom').each(function (indice, valor) { // Recorro cada clase '.iconzoom' de mi tabla de datos
-        // console.log($(`.iconzoom:eq(${indice}) div`).text()) // Muestra el texto del 'div' de esa clase '.icozoom'
-        $(`.iconzoom:eq(${indice})`).click(() => { // Cuando haya un evento de Click en tal índice me imprimirá solo el texto del 'div' en ese índice.
-            // console.log($(`.iconzoom:eq(${indice}) div`).text())
-            const cod = $(`.iconzoom:eq(${indice}) div`).text();
+// ========================================================================================
+function selectProducto() {
+    let cod = this.dataset.codigo;
+    codigo = cod;
+    var detalle = document.querySelector(`.codigo${codigo}`);
 
-            codigo = cod;
-
-            var detalle = document.querySelector(`.codigo${codigo}`);
-
-            if (detalle.classList.contains('is-active')) {
-                detalle.classList.remove('is-active');
-            } else {
-                detalle.classList.add('is-active');
-            }
-
-        })
-    });
-})
+    if (detalle.classList.contains('is-active')) {
+        detalle.classList.remove('is-active');
+    } else {
+        detalle.classList.add('is-active');
+    }
+}
 
 function closeFrame() {
     // console.log(this.dataset.codigo);
@@ -33,9 +27,50 @@ function closeFrame() {
     }
 }
 
+function selectModelImage() {
+    // console.log("url", this.dataset.url)
+    let imgPrevia = document.getElementById(`imgPrevia${codigo}`);
+    imgPrevia.innerHTML = `<img src="${this.dataset.url}" alt="vista Previa">`
+}
+// ========================================================================================
+
+iconzoom.forEach($iconzoom => {
+    $iconzoom.addEventListener('click', selectProducto)
+})
+
 iconzoomtwo.forEach($item => {
     $item.addEventListener('click', closeFrame);
 })
+
+modelImage.forEach($model => {
+    $model.addEventListener('click', selectModelImage)
+})
+
+// ========================================================================================
+
+// $(function () {
+//     console.log($(`.iconzoom`)) // Muestra el texto del 'div' de esa clase '.icozoom'
+//     $('.iconzoom').each(function (indice, valor) { // Recorro cada clase '.iconzoom' de mi tabla de datos
+//         // console.log($(`.iconzoom:eq(${indice}) div`).text()) // Muestra el texto del 'div' de esa clase '.icozoom'
+//         $(`.iconzoom:eq(${indice})`).click(() => { // Cuando haya un evento de Click en tal índice me imprimirá solo el texto del 'div' en ese índice.
+//             // console.log($(`.iconzoom:eq(${indice}) div`).text())
+//             // console.log($(`.iconzoom`))
+//             const cod = $(`.iconzoom:eq(${indice}) div`).text();
+//             // console.log(cod)
+//             // codigo = cod;
+
+//             var detalle = document.querySelector(`.codigo${cod}`);
+//             // console.log(detalle)
+
+//             if (detalle.classList.contains('is-active')) {
+//                 detalle.classList.remove('is-active');
+//             } else {
+//                 detalle.classList.add('is-active');
+//             }
+
+//         })
+//     });
+// })
 
 
 // $(function () {
@@ -54,18 +89,7 @@ iconzoomtwo.forEach($item => {
 // })
 
 
-const flavors = document.querySelectorAll('.flavor');
 
-flavors.forEach($flavor => {
-    // console.log("flavor", $flavor)
-    $flavor.addEventListener('click', selectFlavor)
-})
-
-function selectFlavor() {
-    // console.log("flavor", this.dataset.title)
-    let imgPrevia = document.getElementById(`imgPrevia${codigo}`);
-    imgPrevia.innerHTML = `<img src="${this.dataset.title}" alt="vista Previa">`
-}
 
 
 // var bottomzoom = document.getElementsByClassName('iconzoom');
