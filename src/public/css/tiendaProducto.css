@@ -176,7 +176,8 @@
 }
 
 .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure {
-  height: 550px;
+  /* height: 550px; */
+  height: 55vh;
   position: relative;
   margin: auto;
   text-align: center;
