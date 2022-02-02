@@ -177,18 +177,18 @@
 
 .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure {
   /* height: 550px; */
-  /* height: 55vh; */
-  height: 360px;
+  height: 55vh;
+  /* height: 550px; */
   position: relative;
-  margin: auto;
-  text-align: center;
+   /* margin: auto; */
+  text-align: center; 
 }
 
 .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure img {
   position: relative;
   width: 100%;
-  height: 98%;
-  object-fit: cover;
+  height: 55vh;
+  object-fit: initial;
   /* height: 100%; */
   border-radius: 10px;
   border: 1px solid transparent;
@@ -403,14 +403,14 @@
     height: 200px;
   }
 
-  /* .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure {
-    height: 550px;
-    height: 42vh;
-} */
+  .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure {
+    height: 410px;
+}
 
-  /* .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure img {
-    width: 98%;
-  } */
+  .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure img {
+    /* width: 98%; */
+    height: 410px;
+  }
 
   /* .data tbody tr td .name {
     margin: 0 10px 20px 10px;
@@ -502,12 +502,13 @@
 
   .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure {
     height: 310px;
+    /* padding: 0 15px; */
   }
 
-  /* .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure img {
-    width: 100%;
-    height: 98%;
-  } */
+  .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure img {
+    width: 92%;
+    height: 310px;
+  }
 
   .data tbody tr td .name {
     /* margin: 0 6px 10px 6px; */
@@ -597,9 +598,9 @@
     height: 250px;
   }
 
-  /* .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure img {
-    width: 60%;
-  } */
+  .data tbody tr td .container-product .detalle-model .detalle-model-img .vistaPrevia figure img {
+    height: 250px;
+  }
 
   .data tbody tr td .cesta input {
     width: 184px;
