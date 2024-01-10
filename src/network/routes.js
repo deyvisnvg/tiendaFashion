@@ -8,8 +8,8 @@ const categoria = require('../components/categoria/network');
 const perfil = require('../components/perfil/network');
 
 module.exports = app => {
+    app.use('/', menuTienda)
     app.use('/login', authentication);
-    app.use('/menuTienda', menuTienda)
     app.use('/usuario', usuario);
     app.use('/producto', producto);
     app.use('/categoria', categoria);

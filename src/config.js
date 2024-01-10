@@ -11,15 +11,15 @@ module.exports = {
     },
 
     configDb: {
-        database: process.env.DB_NAME || 'admin_tiendabd', // Vamos a pasar valores como si fueran variables de entorno por defecto
-        username: process.env.DB_USER || 'admin_tiendabd',
-        password: process.env.DB_PASS || 'nethack',
-        host: process.env.DB_HOST || 'valvino.ml',
-
-        // database: process.env.DB_NAME || 'admin_tienda', // Vamos a pasar valores como si fueran variables de entorno por defecto
-        // username: process.env.DB_USER || 'root',
+        // database: process.env.DB_NAME || 'admin_tiendabd', // Vamos a pasar valores como si fueran variables de entorno por defecto
+        // username: process.env.DB_USER || 'admin_tiendabd',
         // password: process.env.DB_PASS || 'nethack',
-        // host: process.env.DB_HOST || 'localhost',
+        // host: process.env.DB_HOST || 'valvino.ml',
+
+        database: process.env.DB_NAME || 'admin_tienda', // Vamos a pasar valores como si fueran variables de entorno por defecto
+        username: process.env.DB_USER || 'root',
+        password: process.env.DB_PASS || 'nethack',
+        host: process.env.DB_HOST || 'localhost',
         pool: {
             max: 5,
             min: 0,
